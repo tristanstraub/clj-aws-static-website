@@ -1,0 +1,8 @@
+{:clojure-1.8  [[org.clojure/clojure "1.8.0"]]
+ :clojure      [:clojure-1.8]
+ :raynes-fs    [[me.raynes/fs "1.4.6"]]
+ :jackson-core [[com.fasterxml.jackson.core/jackson-core "2.6.6"]]
+ :amazonica    [[amazonica "0.3.78"]]
+ :condensation [[com.comoyo/condensation "0.2.2" :exclude [amazonica]]]
+ :pathetic     [[pathetic "0.5.1"]]
+ :aws          [:jackson-core :amazonica]}
