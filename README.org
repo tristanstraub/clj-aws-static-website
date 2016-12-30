@@ -1,0 +1,13 @@
+Create an aws stack for www.example.com, with contents pushed from the local directory:
+
+#+BEGIN_SRC sh
+boot -d com.tristanstraub/clj-aws-static-website:0.1.0-SNAPSHOT create-stack -d example.com -s bitsbyteback push-contents -d example.com -p ./
+#+END_SRC
+
+Creates s3 buckets www-example-com, example-com.
+Creates cloudfront distribution for www.example.com, example.com.
+example.com redirects to www.example.com.
+Creates a hosted zone for example.com.
+
+With your domain registrar, delegate the nameservers to the nameservers listed
+in AWS in the hosted zone NS record. There should be about 4 nameservers listed.

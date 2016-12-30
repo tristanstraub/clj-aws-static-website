@@ -1,4 +1,5 @@
 (ns clj-aws-static-website.boot
+  {:boot/export-tasks true}
   (:require [boot.core :as boot]
             [clj-aws-static-website.stack :as stack]
             [clj-aws-static-website.contents :as contents]))
