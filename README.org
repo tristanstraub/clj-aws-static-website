@@ -1,7 +1,7 @@
 Create an aws stack for www.example.com, with contents pushed from the local directory:
 
 #+BEGIN_SRC sh
-boot -d com.tristanstraub/clj-aws-static-website:0.1.0-SNAPSHOT create-stack -d example.com -s bitsbyteback push-contents -d example.com -p ./
+boot -d com.tristanstraub/clj-aws-static-website:0.1.0-SNAPSHOT create-stack -d example.com -s mystackname push-contents -d example.com -p ./
 #+END_SRC
 
 Creates s3 buckets www-example-com, example-com.
