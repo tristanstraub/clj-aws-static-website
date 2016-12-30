@@ -26,19 +26,13 @@
        (map (fn [path] {:path path
                         :type (mime-type-of path)}))))
 
-(def default-path "resources/public")
-
 (defn push!
-  ([domain]
-   (push! domain default-path))
   ([domain public-path]
-
-   (let [public-path (or public-path default-path)
-         www-domain  (str "www." domain)]
-     ;;(az/defcredential {:endpoint "us-east-1"})
+   {:pre [domain public-path]}
+   (let [www-domain (str "www." domain)]
      (->> (traverse-website public-path)
           (pmap (fn [{:keys [path type]}]
-                  (println "push?" path)
+                  (println "pushing" path)
                   (let [public-file (io/file public-path path)]
                     (when (fs/exists? public-file)
                       (s3/put-object :bucket-name www-domain

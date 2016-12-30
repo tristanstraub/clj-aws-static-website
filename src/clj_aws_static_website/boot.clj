@@ -5,10 +5,10 @@
 
 (boot/deftask create
   "Create aws stack for s3/cloudfront website"
-  [n name   STR str "Name of stack"
+  [s stack   STR str "Name of stack"
    d domain STR str "Create stack for domain"]
   (boot/with-pre-wrap fileset
-    (println (stack/create! name domain))
+    (println (stack/create! stack domain))
     fileset))
 
 (boot/deftask push
@@ -17,5 +17,5 @@
    p path   STR str "Path of files to deploy"]
 
   (boot/with-pre-wrap fileset
-    (println (contents/push! name path))
+    (println (contents/push! domain path))
     fileset))
