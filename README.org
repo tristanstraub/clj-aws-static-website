@@ -1,3 +1,5 @@
+[[https://clojars.org/com.tristanstraub/clj-aws-static-website][https://img.shields.io/clojars/v/com.tristanstraub/clj-aws-static-website.svg]]
+
 Create an aws stack for www.example.com, with contents pushed from the local directory:
 
 #+BEGIN_SRC sh
