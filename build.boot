@@ -5,7 +5,7 @@
 (set-env! :resource-paths #{"src"}
           :dependencies (expand-keywords [:clojure-1.8
                                           :bootlaces
-                                          :aws :condensation :pathetic :raynes-fs]))
+                                          :aws :condensation :pathetic :raynes-fs :incubator]))
 
 (require '[adzerk.bootlaces :refer :all])
 
